@@ -1,0 +1,135 @@
+/* Home.css */
+
+/* Blob Animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Infinite scroll animation for logos */
+@keyframes infinite-scroll-sm {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px); /* For small screens */
+  }
+}
+
+@keyframes infinite-scroll-lg {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* For large screens */
+  }
+}
+
+.animate-infinite-scroll-sm {
+  animation: infinite-scroll-sm 10s linear infinite;
+}
+.animate-infinite-scroll-lg {
+  animation: infinite-scroll-lg 10s linear infinite;
+}
+
+
+
+
+
+/* Fade in and slide up for main heading */
+@keyframes slideUpFade {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.h1-spin {
+  animation: slideUpFade 1s ease-out forwards;
+}
+
+/* Underline animation */
+@keyframes underline {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  51% {
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+.animate-underline {
+  animation: underline 3s ease-in-out infinite;
+}
+
+/* Blob animation class */
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+/* Animation delays */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Infinite scroll animation for company logos */
+.animate-infinite-scroll {
+  animation: infinite-scroll 4s linear infinite;
+}
+
+/* For md and above screens, slower scroll */
+@media (min-width: 768px) {
+  .animate-infinite-scroll {
+    animation-duration: 15s;
+  }
+}
+
+/* Fade in after h1 */
+@keyframes fadeInEffortlessly {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.show-after-h1 {
+  opacity: 0;
+  animation: fadeInEffortlessly 1.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Optional: Make sure the cursor changes on hover for buttons */
+button:hover {
+  cursor: pointer;
+}
